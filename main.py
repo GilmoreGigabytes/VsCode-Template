@@ -1,8 +1,11 @@
+from types import NoneType
 from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
 from colorama import Fore, Style
 from spike.control import Timer
-from filecmp import clear_cache
 from math import *
+import os
+
+os.system("clear")
 
 hub = PrimeHub()
 timer = Timer()
@@ -46,6 +49,7 @@ class error:
             if type(value) != int or value <= 0:
                 error.throw(value, "Cm must be an int greater than 0")
 
+
 def resetYawAngle():
     hub.motion_sensor.reset_yaw_angle()
 
@@ -57,14 +61,7 @@ def resetMotors():
 
 
 def clear():
-    line = "_"
-    clear = " "
-    for x in range(100):
-        line += "_"
-    print(line)
-    for i in range(6):
-        print(clear)
-
+    os.system("cls")
 
 def count(time : int):
     resetMotors()
@@ -130,7 +127,6 @@ def turn(deg : int, direction : str, aggressive : bool = False):
 
     times = 1
     i = 0
-
 
     if deg <= 90:
         if direction == "left":
@@ -331,11 +327,10 @@ def missionSelector():
                 hub.light_matrix.write(str(id))
         elif force.is_pressed():
             if exit == True and id == maxMissions:
-                raise SystemExit(clear_cache())
+                raise SystemExit(clear())
             else:
                 executeMission(id)
 
 # Begin mission execution.
 clear()
 missionSelector()
-

@@ -8,7 +8,8 @@ Firstly you must have git installed as well as the git lens extension
 
 ### **Windows Link**
 
-> https://github.com/git-for-windows/git/releases/download/v2.34.1.windows.1/Git-2.34.1-64-bit.exe
+https://github.com/git-for-windows/git/releases/download/v2.34.1.windows.1/Git-2.34.1-64-bit.exe
+
 
 <br>
 
@@ -18,7 +19,9 @@ If you’re on Fedora (or any closely-related RPM-based distribution, such as RH
 
 <br>
 
-> $ sudo dnf install git-all
+```bash
+ $ sudo dnf install git-all
+```
 
 <br>
 
@@ -26,13 +29,15 @@ If you’re on a Debian-based distribution, such as Ubuntu, try apt:
 
 <br>
 
-> $ sudo apt install git-all
+```bash
+ $ sudo apt install git-all
+```
 
 <br>
 
 ### **Mac Os Install**
 
-> https://git-scm.com/download/mac
+https://git-scm.com/download/mac
 
 <br>
 
@@ -46,9 +51,12 @@ You can install it using the vscode marketplace
 
 <br>
 
-> git init
+```shell
+ git init
 
-> git clone \<link to the github repository>
+ git clone <link to the github repository>
+
+```
 
 <br>
 
@@ -64,7 +72,11 @@ First you need to stage your changes using this command
 
 <br>
 
-> git add .
+```shell
+
+ git add .
+
+```
 
 <br>
 
@@ -73,7 +85,9 @@ in a few words
 
 <br>
 
-> git commit -m "\<text>"
+```shell
+ git commit -m "\<text>"
+```
 
 <br>
 
@@ -85,7 +99,9 @@ now just use the git push command
 
 <br>
 
-> git push
+```
+ git push
+```
 
 <br>
 
@@ -95,5 +111,7 @@ If for example another person has pushed some a change to a github repository yo
 
 <br>
 
-> git pull
+```shell
+ git pull
+ ```
 
