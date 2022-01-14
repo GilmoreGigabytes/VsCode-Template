@@ -14,7 +14,7 @@ This is used to do something very important.
 
 > How you implemented it
 
-it takes two integers and returns it
+it takes two integers and returns it using the return keywoard
 
 > Any issues or things you may want to change
 
