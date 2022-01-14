@@ -48,7 +48,7 @@ You can install it using the vscode marketplace
 
 > git init
 
-> git clone \<link to the repository>
+> git clone \<link to the github repository>
 
 <br>
 
@@ -69,11 +69,11 @@ First you need to stage your changes using this command
 <br>
 
 Now you need to make a commit explaining the changes you made
-in a few words using
+in a few words
 
 <br>
 
-> git commit -m "Made a change"
+> git commit -m "\<text>"
 
 <br>
 
@@ -86,4 +86,14 @@ now just use the git push command
 <br>
 
 > git push
+
+<br>
+
+# How to update your code from your github repository
+
+If for example another person has pushed some a change to a github repository you can update the code using
+
+<br>
+
+> git pull
 
