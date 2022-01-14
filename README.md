@@ -1,11 +1,48 @@
-### Template
-This is a basic template for all future Fll repositories.
-
 <br>
 
 # How to use your repository
 
-## Open a terminal and run
+Firstly you must have git installed as well as the git lens extension
+
+<br>
+
+### **Windows Link**
+
+> https://github.com/git-for-windows/git/releases/download/v2.34.1.windows.1/Git-2.34.1-64-bit.exe
+
+<br>
+
+### **Linux Install**
+
+If you’re on Fedora (or any closely-related RPM-based distribution, such as RHEL or CentOS), you can use dnf:
+
+<br>
+
+> $ sudo dnf install git-all
+
+<br>
+
+If you’re on a Debian-based distribution, such as Ubuntu, try apt:
+
+<br>
+
+> $ sudo apt install git-all
+
+<br>
+
+### **Mac Os Install**
+
+> https://git-scm.com/download/mac
+
+<br>
+
+## **Gitlens Extension**
+
+You can install it using the vscode marketplace 
+
+<br>
+
+# When you have git open a terminal in the folder you want it in and run
 
 <br>
 
@@ -15,7 +52,7 @@ This is a basic template for all future Fll repositories.
 
 <br>
 
-And cd into your new repository
+And cd into your repository folder
 
 <br>
 
