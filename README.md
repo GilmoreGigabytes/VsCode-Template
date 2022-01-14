@@ -36,13 +36,13 @@ If you’re on a Debian-based distribution, such as Ubuntu, try apt:
 
 <br>
 
-## **Gitlens Extension**
+### **Gitlens Extension**
 
-You can install it using the vscode marketplace 
+You can install it using the vscode marketplace
 
 <br>
 
-# When you have git open a terminal in the folder you want it in and run
+# Open a terminal in the folder you want to write code in
 
 <br>
 
