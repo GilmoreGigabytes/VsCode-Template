@@ -86,7 +86,7 @@ in a few words
 <br>
 
 ```shell
- git commit -m "\<text>"
+ git commit -m "<text>"
 ```
 
 <br>
