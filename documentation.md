@@ -1,5 +1,5 @@
 
-### After every push of new code give a brief description of the changes you made and why you made them for example
+### After every push of new code give a brief description of the changes you made and why you made them, for example
 
 <br>
 
