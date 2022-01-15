@@ -2,9 +2,9 @@
 <h1 align="center">
   <strong>Template - Gilmore Gigabytes</strong>
 </h1>
-<p align="center">
-  <strong>undefined.</strong>
-</p>
+
+<br>
+
 <h3 align="center">
   <a href="#">Contributions</a>
   <span>·</span>
@@ -13,19 +13,16 @@
 
 ---
 
-## Branches
-<ul>
-    <li>main -> Development/Production (pull-request this branch for everything).</li>
-</ul>
-
-## Code of Conduct
-Please read CODE_OF_CONDUCT.md for information on our Code of Conduct.
+<br>
 
 ## Contributions
-Before contributing, please make an issue on Github so that other developers know that, that feature is already under development or an error has been fixed.
+
+Before contributing, please make sure to read the CODE_OF_CONDUCT, and creat an issue on Github so that other developers know that, that feature is already under development or an error has been fixed.
+
+<br>
 
 ## How to PR this repository and create commits:
-1. To get started with interacting with this repository from your PC, we suggest that you install GIT onto your PC. If you're on a Linux-based OS such as Arch or MacOS, this does not apply to you. Although, if you have unintalled GIT before, you will have to reinstall it using the command: `sudo apt update && sudo apt upgrade && sudo apt install git` in your terminal (`sudo` being optional. Although advised to not use `root` login for security). For non-linux-based OS' you can follow <a href="https://git-scm.com/downloads" target="_blank">this</a> download link and install directly from there.
+1. To get started with interacting with this repository from your PC, we suggest that you install GIT. If you're on a Linux-based OS such as Arch or MacOS, this does not apply to you. Although, if you have unintalled GIT before, you will have to reinstall it using the command: `sudo apt update && sudo apt upgrade && sudo apt install git` in your terminal (`sudo` being optional. Although advised to not use `root` login for security). For non-linux-based OS' you can follow <a href="https://git-scm.com/downloads" target="_blank">this</a> download link and install directly from there.
 2. Optionally you can also install the <a href="https://desktop.github.com/" target="_blank">GitHub desktop client</a> so that you can make PRs and Commits without the CLI (command-line), especially if new to this as you can severely screw up your PC if you type the wrong command or if you do not know what you're doing.
 
 For this portion of the tutorial we will be using the CLI (command-line) as it is recomended. If you need help with the Github Desktop client, you may search around on their website or your search engine of choice.
@@ -47,10 +44,9 @@ Github no longer supports password authentication when pushing to it. You'll hav
 12. Now that we have set our commit message we may proceed to pushing to the virtual repository. You can do this by running `git push` (P.s. When running `git push`, `git pull` or `git merge` you may be prompted to login, if yes, grab that Personal Access Token which you saved and paste it in for the username then click enter and also paste it in for the password and click enter. If you run this and you get an error about changes on the Github repository that you do not have locally, run: `git merge`. **BEWARE**, your changes **COULD BE OVERWRITTEN!**, depending on if the changes on the virtual repository edit stuff which **you edited**. After running git merge, go back to your code and check to see if anything was overwritten, if it was, change it again and then repeat steps #10, #11 and #12.
  13. Now verify that your stuff was pushed by heading over to the virtual repository. It say that you recently pushed.
  
+ <br>
+  
 ## How to pull latest changes off of Github
 1. Open Terminal if on a Linux-based OS or administrative PowerShell if on a Windows OS.
 2. Now we must change directories into your local respository,`cd <PATH_TO_LOCAL_RESPOSITORY>`, replacing <PATH_TO_LOCAL_RESPOSITORY> with the path to your local respository. You learnt how to find it in the `How to PR this repository and create commits:` tutorial.
 3. Run: `git pull` to pull changes from virtual respository and you're done.
- 
- 
- Congradulations! You have now learnt the very bare-minimum for interacting with GIT repository and the GIT repository host GitHub. You may also use this tutorial to interact with Gitea, GitLab, BitBucket, etc.
