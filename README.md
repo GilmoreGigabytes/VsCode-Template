@@ -1,6 +1,5 @@
-<br>
 
-# How to use your repository
+# How to use your repository (for people that don't know git)
 
 Firstly you must have git installed as well as the git lens extension
 
