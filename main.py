@@ -1,11 +1,10 @@
-from types import NoneType
 from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
 from colorama import Fore, Style
 from spike.control import Timer
 from math import *
 import os
 
-os.system("clear")
+os.system("cls")
 
 hub = PrimeHub()
 timer = Timer()
@@ -26,8 +25,16 @@ defaultSpeed = 60
 
 
 class error:
+    def typeCheck(value, givenType) -> bool:
+        if type(value) != givenType:
+            return True
+        return False
+
+
     def throw(value, text : str):
         raise ValueError(f"Error:{Fore.RED} {value} is invalid {Style.RESET_ALL}\n{text}")
+
+
     def template(value, type : str):
         if type == "sensor":
             if value != "left" and value != "right":
