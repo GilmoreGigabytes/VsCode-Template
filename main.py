@@ -1,5 +1,4 @@
 from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
-from colorama import Fore, Style
 from spike.control import Timer
 from math import *
 import os
@@ -32,7 +31,7 @@ class error:
 
 
     def throw(value, text : str):
-        raise ValueError(f"Error:{Fore.RED} {value} is invalid {Style.RESET_ALL}\n{text}")
+        raise ValueError(f"Error: {value} is invalid \n{text}")
 
 
     def template(value, type : str):
@@ -41,7 +40,7 @@ class error:
                 error.throw(value, "Sensor must be a string with the value of 'left' or 'right'")
             return
         if type == "speed":
-            if type(value) != int or value <= 0:
+            if error.typeCheck(value, int) == False or value <= 0:
                 error.throw(value, "Speed must be an integer greater than 0")
             return
         if type == "direction":
@@ -49,11 +48,11 @@ class error:
                 error.throw(value, "Direction must be a string with the value of 'left' or 'right'")
             return
         if type == "distance":
-            if type(value) != int or value <= 0:
+            if error.typeCheck(value, int) == False  or value <= 0:
                 error.throw(value, "Distance must an integer greater than 0")
             return
         if type == "cm":
-            if type(value) != int or value <= 0:
+            if error.typeCheck(value, int) == False or value <= 0:
                 error.throw(value, "Cm must be an int greater than 0")
 
 
