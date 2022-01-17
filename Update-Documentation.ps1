@@ -1,5 +1,3 @@
-Clear-Content ".\Documentation.md"
+echo "Creating documentaion based on git commit history"
 
-echo "Updating documentaion based on git commit history"
-
-git log -p --all > documentation.md
+git log -p --all --pretty=format:'Author : %an %nDate/Time :  %aD%nCommit : %s' > ./documentaion.md
