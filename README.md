@@ -37,14 +37,17 @@ For this portion of the tutorial we will be using the CLI (command-line) as it i
 12. Now that we have set our commit message we may proceed to pushing to the virtual repository. You can do this by running `git push` (P.s. When running `git push`, `git pull` or `git merge` you may be prompted to login, if yes, grab that Personal Access Token which you saved and paste it in for the username then click enter and also paste it in for the password and click enter. If you run this and you get an error about changes on the Github repository that you do not have locally, run: `git merge`. **BEWARE**, your changes **COULD BE OVERWRITTEN!**, depending on if the changes on the virtual repository edit stuff which **you edited**. After running git merge, go back to your code and check to see if anything was overwritten, if it was, change it again and then repeat steps #10, #11 and #12.
 13. Now verify that your stuff was pushed by heading over to the virtual repository. It will say that you recently pushed.
 
+- A Bytedefined tutorial.
+
 ## How to pull latest changes off of Github
 1. Open Terminal if on a Linux-based OS or administrative PowerShell if on a Windows OS.
 2. Now we must change directories into your local respository,`cd <PATH_TO_LOCAL_RESPOSITORY>`, replacing <PATH_TO_LOCAL_RESPOSITORY> with the path to your local respository. You learnt how to find it in the `How to PR this repository and create commits:` tutorial.
 3. Run: `git pull` to pull changes from virtual respository and you're done.
 
-## Documentation for judges
-### Windows
-In this repository there is a powershell script that will take all of your commit history and dump it into a file called documentation.md. Make sure that you do this once the day of comp because you will have to delete it after to run the script again.
+- A Bytedefined tutorial.
 
+## Documentation for Judges
+### Windows
+In this repository there is a PowerShell script that will take all of your commit history and dump it into a file called documentation.md. Make sure that you do this once the day of competition because you will have to delete it after to run the script again.
 ### Linux
-Linux has the same script just written in bash
+Linux has the same script just written in bash.
