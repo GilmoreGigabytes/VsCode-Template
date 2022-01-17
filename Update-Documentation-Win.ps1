@@ -1,3 +1,4 @@
-echo "Creating documentaion based on git commit history"
-
-git log -p --all --pretty=format:'Author : %an %nDate/Time :  %aD%nCommit : %s' > ./documentaion.md
+echo "Creating documentaion based on GIT commit history."
+rm ./documentation.md
+git log -p --all --pretty=format:'Author : %an %nDate/Time :  %aD%nCommit : %s' > ./documentation.md
+echo "Process completed successfully. You may now close this window."
