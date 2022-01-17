@@ -48,6 +48,8 @@ For this portion of the tutorial we will be using the CLI (command-line) as it i
 
 ## Documentation for Judges
 ### Windows
-In this repository there is a PowerShell script that will take all of your commit history and dump it into a file called documentation.md. Make sure that you do this once the day of competition because you will have to delete it after to run the script again.
+In this repository there is a PowerShell script that will take all of your commit history and dump it into a file called documentation.md. Make sure that you do this on the day of your competition.
 ### Linux
-Linux has the same script just written in bash.
+In this repository there is a BASH script that will take all of your commit history and dump it into a file called documentation.md. Make sure that you do this on the day of your competition.
+
+Running the script a second time will result in the documentation.md file being overwritten, so don't worry about deleting it. Just make sure it's up-to-date.
