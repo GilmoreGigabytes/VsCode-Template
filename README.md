@@ -12,6 +12,11 @@
 </h3>
 
 ---
+<br>
+
+## **Disclaimer**
+
+### Most if not all of this code will not run if you are not using the spike prime extension for vscode (https://marketplace.visualstudio.com/items?itemName=PeterStaev.lego-spikeprime-mindstorms-vscode)
 
 <br>
 
