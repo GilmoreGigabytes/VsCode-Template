@@ -38,3 +38,17 @@ For this portion of the tutorial we will be using the CLI (command-line) as it i
 1. Open Terminal if on a Linux-based OS or administrative PowerShell if on a Windows OS.
 2. Now we must change directories into your local respository,`cd <PATH_TO_LOCAL_RESPOSITORY>`, replacing <PATH_TO_LOCAL_RESPOSITORY> with the path to your local respository. You learnt how to find it in the `How to PR this repository and create commits:` tutorial.
 3. Run: `git pull` to pull changes from virtual respository and you're done.
+
+<br>
+
+## Documentation for judges
+
+<br>
+
+### Windows
+In this repository there is a powershell script that will take all of your commit history and dump it into a file called documentation.md. Make sure that you do this once the day of comp because you will have to delete it after to run the script again.
+
+<br>
+
+### Linux
+Linux has the same script just written in bash
