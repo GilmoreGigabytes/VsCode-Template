@@ -302,10 +302,9 @@ def start(direction : str):
 
 
 def executeMission(id : int):
-    if id == 1:
-        pass
-    else:
-          error.throw(id, "Invalid Mission")
+    match id:
+        case 1:
+            pass
 
 def missionSelector():
     id = 0
