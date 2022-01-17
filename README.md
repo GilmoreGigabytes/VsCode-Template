@@ -18,7 +18,7 @@
 
 ### Most if not all of this code will not run if you are not using the spike prime extension for vscode (https://marketplace.visualstudio.com/items?itemName=PeterStaev.lego-spikeprime-mindstorms-vscode)
 
-<br>
+^ (If using Visual Studio Code) - Bytedefined
 
 ## How to PR this repository and create commits:
 1. To get started with interacting with this repository from your PC, we suggest that you install GIT. If you're on a Linux-based OS such as Arch or MacOS, this does not apply to you. Although, if you have unintalled GIT before, you will have to reinstall it using the command: `sudo apt update && sudo apt upgrade && sudo apt install git` in your terminal (`sudo` being optional. Although advised to not use `root` login for security). For non-linux-based OS' you can follow <a href="https://git-scm.com/downloads" target="_blank">this</a> download link and install directly from there.
@@ -35,25 +35,16 @@ For this portion of the tutorial we will be using the CLI (command-line) as it i
 10. Now you can start to push your changes to the virtual repository, let's begin shall we? Firstly, run `git add .` whilst inside of your local respository in the command-line. This adds all your local changes to a commit.
 11. Once done, you can set a commit message to tell people what you did, you can do this by running `git commit -m "<COMMIT_MESSAGE>"`, replacing <COMMIT_MESSAGE> with your message. Please note, not all special characters (symbols) are allowed in the commit message, so if it fails and says something about characters, you know what to do.
 12. Now that we have set our commit message we may proceed to pushing to the virtual repository. You can do this by running `git push` (P.s. When running `git push`, `git pull` or `git merge` you may be prompted to login, if yes, grab that Personal Access Token which you saved and paste it in for the username then click enter and also paste it in for the password and click enter. If you run this and you get an error about changes on the Github repository that you do not have locally, run: `git merge`. **BEWARE**, your changes **COULD BE OVERWRITTEN!**, depending on if the changes on the virtual repository edit stuff which **you edited**. After running git merge, go back to your code and check to see if anything was overwritten, if it was, change it again and then repeat steps #10, #11 and #12.
- 13. Now verify that your stuff was pushed by heading over to the virtual repository. It say that you recently pushed.
-
- <br>
+13. Now verify that your stuff was pushed by heading over to the virtual repository. It will say that you recently pushed.
 
 ## How to pull latest changes off of Github
 1. Open Terminal if on a Linux-based OS or administrative PowerShell if on a Windows OS.
 2. Now we must change directories into your local respository,`cd <PATH_TO_LOCAL_RESPOSITORY>`, replacing <PATH_TO_LOCAL_RESPOSITORY> with the path to your local respository. You learnt how to find it in the `How to PR this repository and create commits:` tutorial.
 3. Run: `git pull` to pull changes from virtual respository and you're done.
 
-<br>
-
 ## Documentation for judges
-
-<br>
-
 ### Windows
 In this repository there is a powershell script that will take all of your commit history and dump it into a file called documentation.md. Make sure that you do this once the day of comp because you will have to delete it after to run the script again.
-
-<br>
 
 ### Linux
 Linux has the same script just written in bash
