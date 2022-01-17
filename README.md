@@ -20,7 +20,7 @@
 
 ^ (If using Visual Studio Code) - Bytedefined
 
-## How to PR this repository and create commits:
+## How to PR this virtual repository and create commits:
 1. To get started with interacting with this repository from your PC, we suggest that you install GIT. If you're on a Linux-based OS such as Arch or MacOS, this does not apply to you. Although, if you have unintalled GIT before, you will have to reinstall it using the command: `sudo apt update && sudo apt upgrade && sudo apt install git` in your terminal (`sudo` being optional. Although advised to not use `root` login for security). For non-linux-based OS' you can follow <a href="https://git-scm.com/downloads" target="_blank">this</a> download link and install directly from there.
 2. Optionally you can also install the <a href="https://desktop.github.com/" target="_blank">GitHub desktop client</a> so that you can make PRs and Commits without the CLI (command-line), especially if new to this as you can severely screw up your PC if you type the wrong command or if you do not know what you're doing.
 
@@ -39,7 +39,7 @@ For this portion of the tutorial we will be using the CLI (command-line) as it i
 
 - A Bytedefined tutorial.
 
-## How to pull latest changes off of Github
+## How to pull latest changes off of virtual repository:
 1. Open Terminal if on a Linux-based OS or administrative PowerShell if on a Windows OS.
 2. Now we must change directories into your local respository,`cd <PATH_TO_LOCAL_RESPOSITORY>`, replacing <PATH_TO_LOCAL_RESPOSITORY> with the path to your local respository. You learnt how to find it in the `How to PR this repository and create commits:` tutorial.
 3. Run: `git pull` to pull changes from virtual respository and you're done.
