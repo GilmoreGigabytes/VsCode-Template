@@ -16,7 +16,7 @@
 
 ## **Disclaimer**
 
-### Most if not all of this code will not run if you are not using the spike prime extension for vscode (https://marketplace.visualstudio.com/items?itemName=PeterStaev.lego-spikeprime-mindstorms-vscode)
+### Most, if not all of this code will not run if you are not using the Spike Prime extension for Visual Studio Code <a href="https://marketplace.visualstudio.com/items?itemName=PeterStaev.lego-spikeprime-mindstorms-vscode" target="_blank">Download here</a>
 
 ^ (If using Visual Studio Code) - Bytedefined
 
