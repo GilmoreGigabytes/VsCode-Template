@@ -52,4 +52,4 @@ In this repository there is a PowerShell script that will take all of your commi
 ### Linux
 In this repository there is a BASH script that will take all of your commit history and dump it into a file called documentation.md. Make sure that you do this on the day of your competition.
 
-Running the script a second time will result in the documentation.md file being overwritten, so don't worry about deleting it. Just make sure it's up-to-date.
+*Running the script a second time will result in the documentation.md file being overwritten, so don't worry about deleting it. Just make sure it's up-to-date.*
