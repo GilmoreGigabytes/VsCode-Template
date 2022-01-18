@@ -1,5 +1,3 @@
-<br>
-
 <h1 align="center">
   <strong>Template - Gilmore Gigabytes</strong>
 </h1>
@@ -58,3 +56,5 @@ In this repository there is a BASH script that will take all of your commit hist
  <br>
   
  ### This Readme was written by <a href="https://github.com/Bytedefined" target="_blank">**Bytedefined**</a>
+
+ <br>
