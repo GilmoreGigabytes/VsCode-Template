@@ -11,7 +11,8 @@ bash</a> scripts in this repository.
 <br>
 
 **Note**:
-This file will be completly re-written after every use of either of
-those scripts
+Running the script a second time will result in the documentation.md file being overwritten, 
+so don't worry about deleting it. Just make sure it's up-to-date
+
 
 <br>
