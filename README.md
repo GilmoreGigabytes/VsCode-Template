@@ -18,7 +18,6 @@
 
 ### Most, if not all of this code will not run if you are not using the Spike Prime extension for Visual Studio Code <a href="https://marketplace.visualstudio.com/items?itemName=PeterStaev.lego-spikeprime-mindstorms-vscode" target="_blank">Download here</a>
 
-^ (If using Visual Studio Code) - Bytedefined
 
 ## How to PR this virtual repository and create commits:
 1. To get started with interacting with this repository from your PC, we suggest that you install GIT. If you're on a Linux-based OS such as Arch or MacOS, this does not apply to you. Although, if you have unintalled GIT before, you will have to reinstall it using the command: `sudo apt update && sudo apt upgrade && sudo apt install git` in your terminal (`sudo` being optional. Although advised to not use `root` login for security). For non-linux-based OS' you can follow <a href="https://git-scm.com/downloads" target="_blank">this</a> download link and install directly from there.
@@ -50,6 +49,9 @@ For this portion of the tutorial we will be using the CLI (command-line) as it i
 ### Windows
 In this repository there is a PowerShell script that will take all of your commit history and dump it into a file called documentation.md. Make sure that you do this on the day of your competition.
 ### Linux
-In this repository there is a BASH script that will take all of your commit history and dump it into a file called documentation.md. Make sure that you do this on the day of your competition.
+In this repository there is a BASH script that will take all of your commit history and dump it into a file called documentation.md. 
 
 *Running the script a second time will result in the documentation.md file being overwritten, so don't worry about deleting it. Just make sure it's up-to-date.*
+  
+  
+  This Readme was written by <a href="https://github.com/Bytedefined" target="_blank">ByteDefined</a>
