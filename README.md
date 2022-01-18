@@ -8,7 +8,7 @@
 <h3 align="center">
   <a href="#">Contributions</a>
   <span>·</span>
-  <a href="">Documentation</a>
+  <a href="https://github.com/GilmoreGigabytes/Template/edit/main/documentation.md">Documentation</a>
 </h3>
 
 ---
