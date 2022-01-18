@@ -1,4 +1,7 @@
-﻿# Documentation
+﻿
+ <br>
+ 
+ # Documentation
 
 This is generated based off of your git history using the
 <a href="https://github.com/GilmoreGigabytes/Template/blob/main/update_documentation.ps1" target="_blank">powershell</a> and
