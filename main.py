@@ -1,3 +1,4 @@
+from difflib import Match
 from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
 from spike.control import Timer
 from math import *
@@ -31,7 +32,7 @@ class error:
 
 
     def throw(value, text : str):
-        raise ValueError(f"Error: {value} is invalid \n{text}")
+        raise ValueError(f"Error: {value} is invalmissionId \n{text}")
 
 
     def template(value, type : str):
@@ -150,7 +151,7 @@ def turn(deg : int, direction : str, aggressive : bool = False):
         times += 1
         deg -= 45
 
-    if deg >= 45:
+    if deg > 45:
         times = 0
         remainder = deg - 45
 
@@ -231,10 +232,9 @@ def moveArm(direction : str, speed : int, distance : int or float):
 
     if direction == "down":
         arm.run_for_rotations(distance, speed)
+        return
     elif direction == "up":
         arm.run_for_rotations(-distance, speed)
-    else:
-        error.template(distance, "distance")
 
 
 def moveToLine(sensor : str, direction : str):
@@ -277,37 +277,18 @@ def moveToLine(sensor : str, direction : str):
 
 
 def start(direction : str):
-    error.template(direction, "direction")
-
-    move(2, "backward", 60)
-    resetYawAngle()
-
-    if direction == "left":
-        moveToLine("left", "forward")
-    elif direction == "middle":
-        moveWithCorrection(14, "forward")
-        turn(40, "right", False)
-        moveToLine("right", "forward")
-    elif direction == "right":
-        moveWithCorrection(15, "forward")
-        turn(145, "right", False)
-        moveWithCorrection(14.5, "forward")
-        turn(39, "left", False)
-        moveToLine("right", "forward")
-    elif direction == "chicken way":
-        moveWithCorrection(23, "forward")
-        turn(90, "right", False)
-    else:
-        error.throw(direction, "Direction must be a string with the value of 'left', 'middle', 'right', 'chicken way")
+    match direction:
+        case 0:
+            pass
 
 
-def executeMission(id : int):
-    match id:
+def executeMission(missionmissionId : int):
+    match missionmissionId:
         case 1:
             pass
 
 def missionSelector():
-    id = 0
+    missionId = 0
     maxMissions = 7
     hub.status_light.on("blue")
     hub.light_matrix.show_image("GIRAFFE", brightness = 100)
@@ -316,26 +297,30 @@ def missionSelector():
 
     while True:
         if hub.right_button.was_pressed():
-            if id == maxMissions:
+            if missionId == maxMissions:
                 exit = True
                 hub.light_matrix.show_image("SQUARE_SMALL", brightness = 100)
             else:
                 exit = False
-                id += 1
-                hub.light_matrix.write(str(id))
+                missionId += 1
+                hub.light_matrix.write(str(missionId))
         elif hub.left_button.was_pressed():
-            if id == 0:
+            if missionId == 0:
                 exit = False
             else:
                 exit = True
-                id -= 1
-                hub.light_matrix.write(str(id))
+                missionId -= 1
+                hub.light_matrix.write(str(missionId))
         elif force.is_pressed():
-            if exit == True and id == maxMissions:
+            if exit == True and missionId == maxMissions:
                 raise SystemExit(clear())
             else:
-                executeMission(id)
+                executeMission(missionId)
+
 
 # Begin mission execution.
-clear()
-missionSelector()
+if __name__ == "__main__":
+    clear()
+    missionSelector()
+else:
+    raise SystemExit(clear())
