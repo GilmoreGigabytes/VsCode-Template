@@ -1,8 +1,5 @@
 
 # The Error class
-
-<br>
-
 ## typeCheck
 Takes a value and a type and checks if that value has that type
 
@@ -28,8 +25,6 @@ Takes a value and a type relating to movement function arguments
 <br>
 
 # Ease of use functions
-
-<br>
 
 ## resetYawAngle
 Resets the yaw angle
@@ -67,8 +62,6 @@ Will print a formated string with the current yaw, roll and pitch of the spike p
 <br>
 
 # Movement Functions
-
-<br>
 
 ## move
 Takes two integers (distance and speed), as well as a string (direction). Speed has a default value of the global variable default speed, and distance must be greater than 0. Direction muste be a string with the value of "forward" or "backward".
@@ -123,8 +116,6 @@ Takes two strings (sensor, direction) and will just drive the given direction un
 <br>
 
 # Mission
-
-<br>
 
 ## start
 Takes as string (direction) You need to write your own way of going to the lines based off of the year
