@@ -1,5 +1,3 @@
-﻿
-
  # Documentation
 
 Documentation is generated based off of your git history using the
