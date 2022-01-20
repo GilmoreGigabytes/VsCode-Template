@@ -48,7 +48,7 @@ For this portion of the tutorial we will be using the CLI (command-line) as it i
 
 ## Documentation for Judges
 ### Windows
-In this repository there is a PowerShell script that will take all of your commit history and dump it into a file called documentation.md. Make sure that you do this on the day of your competition.
+In this repository there is a PowerShell script that will take all of your commit history and dump it into a file called judgeDocumentation.md. Make sure that you do this on the day of your competition.
 ### Linux
 In this repository there is a BASH script that will take all of your commit history and dump it into a file called documentation.md. 
 
