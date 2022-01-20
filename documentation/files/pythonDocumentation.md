@@ -1,6 +1,8 @@
 
 <h1 align="center">Ease of use functions <h3>
 
+<br>
+
 ## ResetYawAngle
 Resets the yaw angle
 
@@ -37,6 +39,8 @@ Will print a formated string with the current yaw, roll and pitch of the spike p
 <br>
 
 <h1 align="center">Movement Functions <h3>
+
+<br>
 
 ## Move
 Will move your spike prime forward or backward using motor degrees.
@@ -91,6 +95,8 @@ Will just drive the given direction until the given sensor detects black.
 
 <h1 align="center">Mission Functions <h3>
 
+<br>
+
 ## Start
 You need to write your own way of going to the lines based off of the year.
 
@@ -99,13 +105,15 @@ You need to write your own way of going to the lines based off of the year.
 <br>
 
 ## ExecuteMission
-Uses match case to run the corresponding mission using an argument passed from the mission selector function.
+Uses match case to run the corresponding mission using an argument passed from the mission selector.
 
 - missionId: int -> > 0
 
 <br>
 
 <h1 align="center">Error Class <h3>
+
+<br>
 
 ## TypeCheck
 Takes a value and a type and checks if that value has that type
