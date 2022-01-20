@@ -1,4 +1,3 @@
-from difflib import Match
 from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
 from spike.control import Timer
 from math import *
@@ -320,7 +319,6 @@ def missionSelector():
 
 # Begin mission execution.
 if __name__ == "__main__":
-    clear()
     missionSelector()
 else:
-    raise SystemExit(clear())
+    raise SystemExit("")
