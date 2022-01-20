@@ -7,7 +7,7 @@
 <h3 align="center">
   <a href="#">Contributions</a>
   <span>·</span>
-  <a href="https://github.com/GilmoreGigabytes/Template/blob/main/documentation.md">Documentation</a>
+  <a href="https://github.com/GilmoreGigabytes/Template/blob/main/documentation/files/documentation.md">Documentation</a>
 </h3>
 
 ---
