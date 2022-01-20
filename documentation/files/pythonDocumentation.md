@@ -1,5 +1,5 @@
 
-<h1 align="center">Ease of use functions <h3>
+<h1 align="center">Ease Of Use Functions <h3>
 
 <br>
 
