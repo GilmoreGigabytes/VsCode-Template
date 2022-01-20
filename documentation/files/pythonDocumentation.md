@@ -58,7 +58,7 @@ Moves forward with correction using the gyro at a set speed as to stop inconcist
 
 <br>
 
-## turn
+## Turn
 This function needs alot more explintaion. If aggressive is true it will turn much faster but will be slightly less accurate. It then will check if the given degrees is < 90. This is because the gyro works by going from 0 ~ 180 ~ -180 ~ 0, meaning that you can't just do a simple while loop. If the degrees is < 90 then it will just turn the given direction for the given degrees. If it is > 90 it will run through a while loop where it will increment a value (times) and take 45 from deg until it is < 90. Now it will check the remainding degrees to see if it is > 45, if is it will set a variable remainder to the value of deg - 45 (the actual remainder) and take 1 from the times variable. Now it will turn the given direction for the given times. After that it will check if the remainder variable has a type, and if it does it means that it does have remainding degrees and will turn for that remainder. And if it dosent have a value it means that there is no remainding distance to turn and will end the function.
 
 
