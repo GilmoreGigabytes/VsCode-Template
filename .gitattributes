@@ -1,0 +1,8 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# These are explicitly windows files and should use crlf
+*.ps1           text eol=crlf
+
+# These are explicitly linux files and should use fl
+*.bash           text eol=fl
