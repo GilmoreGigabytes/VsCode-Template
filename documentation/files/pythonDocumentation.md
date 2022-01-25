@@ -27,7 +27,7 @@ Will print a formated string with the current yaw, roll and pitch of the spike p
 
 ---
 
-<h1 align="center">Movement Functions <h3>
+<h1 align="center">Movement Functions <h1>
 
 <br>
 
@@ -134,3 +134,9 @@ Takes a value and a type relating to movement function arguments
 
 ---
 <br>
+
+<h1 align="center">Vscode<h3>
+
+# Errors
+
+You may be seeing error squiggles around the mission selector and execute mission functions. This is because you are not using python 3.10.2, but when you upload code to spike prime it will run through the LEGO SPIKE Prime / MINDSTORMS Robot Inventor Extension and should compile fine.
