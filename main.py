@@ -66,7 +66,7 @@ def resetMotors():
 
 
 def clear():
-    if platform == "linux":
+    if platform == "linux" or platform == "linux2":
         os.sytem("clear")
     else:
         os.system("cls")
