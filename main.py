@@ -1,9 +1,8 @@
 from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
 from spike.control import Timer
+from sys import platform 
 from math import *
 import os
-
-os.system("cls")
 
 hub = PrimeHub()
 timer = Timer()
@@ -67,7 +66,10 @@ def resetMotors():
 
 
 def clear():
-    os.system("cls")
+    if platform == "linux":
+        os.sytem("clear")
+    else:
+        os.system("cls")
 
 def count(time : int):
     resetMotors()
