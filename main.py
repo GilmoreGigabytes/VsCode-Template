@@ -21,7 +21,6 @@ force = ForceSensor("D")
 
 defaultSpeed = 60
 
-
 class error:
     def typeCheck(value, givenType) -> bool:
         if type(value) != givenType:
@@ -66,7 +65,7 @@ def resetMotors():
 
 
 def clear():
-    if platform == "linux" or platform == "linux2":
+    if platform == "linux":
         os.sytem("clear")
     else:
         os.system("cls")
@@ -193,7 +192,7 @@ def followLine(sensor : str, cm : int or float):
     resetMotors()
 
     deg = cm / 0.077
-    kp = 0.2  # Value used for the calculation of the rate of change
+    kp = 0.2  
     ki = 0
     kd = 0.22
     integral = 0
@@ -289,6 +288,7 @@ def executeMission(missionId : int):
         case 1:
             pass
 
+
 def missionSelector():
     missionId = 0
     maxMissions = 7
@@ -324,4 +324,4 @@ def missionSelector():
 if __name__ == "__main__":
     missionSelector()
 else:
-    raise SystemExit("")
+    raise SystemExit(clear())
