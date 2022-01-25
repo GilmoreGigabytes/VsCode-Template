@@ -16,7 +16,7 @@
 
 ## **Disclaimer**
 
-### Most, if not all of this code will not run if you are not using the Spike Prime extension for Visual Studio Code <a href="https://marketplace.visualstudio.com/items?itemName=PeterStaev.lego-spikeprime-mindstorms-vscode" target="_blank">Download here</a>, and make sure to use python 3.10.1 when uploading your code to the Spike Prime.
+### Most, if not all of this code will not run if you are not using the Spike Prime extension for Visual Studio Code <a href="https://marketplace.visualstudio.com/items?itemName=PeterStaev.lego-spikeprime-mindstorms-vscode" target="_blank">Download here</a>, and make sure to use python 3.10.1 version when uploading your code to the Spike Prime.
 
 <br>
 
