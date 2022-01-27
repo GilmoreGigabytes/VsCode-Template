@@ -29,7 +29,7 @@ class error:
 
 
     def throw(value, text : str):
-        raise ValueError(f"Error: {value} is invalmissionId \n{text}")
+        raise ValueError(f"Error: {value} is invalid \n{text}")
 
 
     def template(value, type : str):
