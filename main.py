@@ -281,8 +281,7 @@ def start(direction : str):
         case 0:
             pass
 
-# If you see an error it is because your vscode config dosent use python 3.10
-# But since you are using the fll extension it wont impact how the code runs
+        
 def executeMission(missionId : int):
     match missionId:
         case 1:
