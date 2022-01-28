@@ -277,16 +277,12 @@ def moveToLine(sensor : str, direction : str):
 
 
 def start(direction : str):
-    match direction:
-        case 0:
-            pass
-
+    if direcion == "none" :
+        pass
         
 def executeMission(missionId : int):
-    match missionId:
-        case 1:
-            pass
-
+    if missionId == 0:
+        pass
 
 def missionSelector():
     missionId = 0

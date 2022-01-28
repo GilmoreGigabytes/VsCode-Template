@@ -139,4 +139,9 @@ Takes a value and a type relating to movement function arguments
 
 # Errors
 
-You may be seeing error squiggles around the mission selector and execute mission functions. This is because you are not using python 3.10.2, but when you upload code to spike prime it will run through the LEGO SPIKE Prime / MINDSTORMS Robot Inventor Extension and should compile fine.
+If you get an error relating to motors you most likely have not setup the motors, or those motors are broken. 
+
+If you try and run the code using vscodes inbuilt python compiler you will get an error.
+This is because vscode does not have the spike modules installed.
+If you want to run your code look at read the readme.
+
