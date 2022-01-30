@@ -319,4 +319,4 @@ def missionSelector():
 if __name__ == "__main__":
     missionSelector()
 else:
-    raise SystemExit(clear())
+    raise SystemExit("This is not the main python file")
