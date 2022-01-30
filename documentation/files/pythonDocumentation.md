@@ -139,9 +139,9 @@ Takes a value and a type relating to movement function arguments
 
 # Errors
 
-If you get an error relating to motors you most likely have not setup the motors, or those motors are broken. 
+If you get an error relating to motors you most likely have not setup the motor ports properly, or those motors are broken. 
 
-If you try and run the code using vscodes inbuilt python compiler you will get an error.
+If you try and run the code using vscodes builtin python compiler you will get an error.
 This is because vscode does not have the spike modules installed.
-If you want to run your code look at read the readme.
+If you want to run your code look at read the README.
 

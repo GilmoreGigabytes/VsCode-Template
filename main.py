@@ -65,7 +65,7 @@ def resetMotors():
 
 
 def clear():
-    if platform == "linux":
+    if platform == "linux" or "darwin":
         os.sytem("clear")
     else:
         os.system("cls")
@@ -277,7 +277,7 @@ def moveToLine(sensor : str, direction : str):
 
 
 def start(direction : str):
-    if direcion == "none" :
+    if direction == "none" :
         pass
         
 def executeMission(missionId : int):
