@@ -303,9 +303,9 @@ def missionSelector():
                 hub.light_matrix.write(str(missionId))
         elif hub.left_button.was_pressed():
             if missionId == 0:
-                exit = False
-            else:
                 exit = True
+            else:
+                exit = False
                 missionId -= 1
                 hub.light_matrix.write(str(missionId))
         elif force.is_pressed():
