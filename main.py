@@ -7,17 +7,15 @@ import os
 hub = PrimeHub()
 timer = Timer()
 
-movepair = MotorPair("F", "A")
+movepair = MotorPair("A", "D")
 
-rightMotor = Motor("A")
-leftMotor = Motor("F")
+rightMotor = Motor("D")
+leftMotor = Motor("A")
 
-arm = Motor("E")
+arm = Motor("C")
 
-colourL = ColorSensor("B")
-colourR = ColorSensor("C")
-
-force = ForceSensor("D")
+colourL = ColorSensor("F")
+colourR = ColorSensor("B")
 
 defaultSpeed = 60
 
@@ -29,29 +27,40 @@ class error:
 
 
     def throw(value, text : str):
-        raise ValueError(f"Error: {value} is invalid \n{text}")
+        raise ValueError("Error: " + str(value) + " is invalid \n" + str(text))
 
 
-    def template(value, type : str):
-        if type == "sensor":
+    def template(value, typeVar : str):
+        if str(typeVar) == "sensor":
             if value != "left" and value != "right":
                 error.throw(value, "Sensor must be a string with the value of 'left' or 'right'")
             return
-        if type == "speed":
-            if error.typeCheck(value, int) == False or value <= 0:
+        if str(typeVar) == "speed":
+            if error.typeCheck(value, int and float) == False or value <= 0:
                 error.throw(value, "Speed must be an integer greater than 0")
             return
-        if type == "direction":
-            if value <= "left" and value != "right":
+        if str(typeVar) == "direction":
+            if value != "left" and value != "right":
                 error.throw(value, "Direction must be a string with the value of 'left' or 'right'")
             return
-        if type == "distance":
-            if error.typeCheck(value, int) == False  or value <= 0:
+        if str(typeVar) == "moveDirection":
+            if value != "forward" and value != "backward":
+                error.throw(value, "Direction must be a string with the value of 'forward' or 'backward'")
+            return
+        if str(typeVar) == "armDirection":
+            if error.typeCheck(value, str) or value != "up" and value != "down":
+                error.throw(value, "Direction must be a string with the value of 'up' or 'down'")
+        if str(typeVar) == "distance":
+            if error.typeCheck(value, float) == False and error.typeCheck(value, int) == False or value <= 0:
                 error.throw(value, "Distance must an integer greater than 0")
             return
-        if type == "cm":
-            if error.typeCheck(value, int) == False or value <= 0:
-                error.throw(value, "Cm must be an int greater than 0")
+        if str(typeVar) == "armDistance":
+            if error.typeCheck(value, int) == False and error.typeCheck(value, float) == False:
+                error.throw(value, "Distance must an integer or float")
+            return
+        if str(typeVar) == "cm":
+            if error.typeCheck(value, int and float) == False or value <= 0:
+                error.throw(value, "Cm must be an integer greater than 0")
 
 
 def resetYawAngle():
@@ -70,12 +79,24 @@ def clear():
     else:
         os.system("cls")
 
+def waitLight(time : int, i : int, step : int, on : bool):
+    timer.reset()
+    
+    if on == False:
+        while timer.now() < time:
+            hub.light_matrix.show_image("SQUARE_SMALL", brightness = i)
+            i -= step
+    if on == True:
+        while timer.now() < time:
+            hub.light_matrix.show_image("SQUARE_SMALL", brightness = i)
+            i += step
+            
 def count(time : int):
     resetMotors()
     timer.reset()
 
     while timer.now() < time:
-        print(f"Left Motor: {leftMotor.get_degrees_counted()} | Right Motor: {rightMotor.get_degrees_counted()} | Arm: {arm.get_degrees_counted()} | Left Colour Sensor: {colourL.get_color()} | Right Colour Sensor: {colourR.get_color()}")
+        print("Left Motor: " + str(leftMotor.get_degrees_counted()) + " | Right Motor: " + str(rightMotor.get_degrees_counted()) + " | Arm: " + str(arm.get_degrees_counted()) + " | Left Colour Sensor: " + str(colourL.get_color())) + " | Right Colour Sensor: " + str(colourR.get_color())
     clear()
 
 
@@ -84,7 +105,7 @@ def motion():
     roll = hub.motion_sensor.get_roll_angle()
     pitch = hub.motion_sensor.get_pitch_angle()
 
-    print(f"Yaw: {yaw} | Pitch: {pitch} | Roll: {roll}")
+    print("Yaw: " + str(yaw) + " | Pitch: " + str(pitch) + " | Roll: " + str(roll))
 
 
 def move(distance : int, direction : str, speed : int  = defaultSpeed):
@@ -121,6 +142,8 @@ def turn(deg : int, direction : str, aggressive : bool = False):
     error.template(deg, "deg")
     error.template(direction, "direction")
 
+    remainder = None
+
     if type(aggressive) != bool:
         error.throw(aggressive, "Aggressive mode must be a boolien")
 
@@ -130,7 +153,7 @@ def turn(deg : int, direction : str, aggressive : bool = False):
     if aggressive == True:
         turnSpeed = 100
     else:
-        turnSpeed = 20
+        turnSpeed = 45
 
     times = 1
     i = 0
@@ -155,7 +178,7 @@ def turn(deg : int, direction : str, aggressive : bool = False):
         times = 0
         remainder = deg - 45
 
-    var = 44  # Adjusts for give in the wheels
+    var = 45 
 
     if direction == "left":
         while i < times:
@@ -286,37 +309,39 @@ def executeMission(missionId : int):
 
 def missionSelector():
     missionId = 0
-    maxMissions = 7
-    hub.status_light.on("blue")
-    hub.light_matrix.show_image("GIRAFFE", brightness = 100)
+    maxMissions = 3
+    turn = 10
 
     exit = False
 
     while True:
+        resetMotors()
         if hub.right_button.was_pressed():
-            if missionId == maxMissions:
+            if missionId >= maxMissions:
+                if missionId == maxMissions + 1:
+                    pass
+                else:
+                    missionId += 1
                 exit = True
-                hub.light_matrix.show_image("SQUARE_SMALL", brightness = 100)
             else:
                 exit = False
                 missionId += 1
-                hub.light_matrix.write(str(missionId))
-        elif hub.left_button.was_pressed():
-            if missionId == 0:
-                exit = True
-            else:
-                exit = False
+        if hub.left_button.was_pressed():
+            if missionId != 0:
                 missionId -= 1
-                hub.light_matrix.write(str(missionId))
-        elif force.is_pressed():
-            if exit == True and missionId == maxMissions:
-                raise SystemExit(clear())
+                exit = False
+        if abs(rightMotor.get_degrees_counted()) >= turn:
+            if exit == True and missionId >= maxMissions:
+                clear()
+                waitLight(1.5, 1, 100, False)
+                raise SystemExit("Exiting...")
             else:
                 executeMission(missionId)
-
+        if exit == True:
+            hub.light_matrix.show_image("SQUARE_SMALL", brightness = 100)
+        else:
+            hub.light_matrix.write(str(missionId))    
+        hub.status_light.on("blue")
 
 # Begin mission execution.
-if __name__ == "__main__":
-    missionSelector()
-else:
-    raise SystemExit("This is not the main python file")
+missionSelector()
