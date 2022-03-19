@@ -107,8 +107,6 @@ Uses match case to run the corresponding mission using an argument passed from t
 <br>
 
 ---
-<h1 align="center">Error Class <h3>
-<br>
 
 <h1 align="center">Vscode<h3>
 
@@ -119,4 +117,3 @@ If you get an error relating to motors you most likely have not setup the motor 
 If you try and run the code using vscodes builtin python compiler you will get an error.
 This is because vscode does not have the spike modules installed.
 If you want to run your code look at read the README.
-
