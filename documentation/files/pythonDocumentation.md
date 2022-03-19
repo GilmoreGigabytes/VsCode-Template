@@ -110,31 +110,6 @@ Uses match case to run the corresponding mission using an argument passed from t
 <h1 align="center">Error Class <h3>
 <br>
 
-# TypeCheck
-Takes a value and a type and checks if that value has that type
-
-- value: variable
-- givenType: type -> int, str, bool etc ...
-
-<br>
-
-# Throw
-Takes a value and will raise a value error formatted with the variable that was passed as an argument
-
-- value: variable -> any
-- text: str
-
-<br>
-
-# Template
-Takes a value and a type relating to movement function arguments
-
-- value: variable -> any
-- type: string -> "sensor", "speed", "direction", "distance" or "cm"
-
----
-<br>
-
 <h1 align="center">Vscode<h3>
 
 # Errors
