@@ -1,9 +1,7 @@
 from spike import PrimeHub, LightMatrix, Button, StatusLight, ForceSensor, MotionSensor, Speaker, ColorSensor, App, DistanceSensor, Motor, MotorPair
 from spike.control import Timer
-from sys import platform 
 from math import *
-import os
-
+  
 hub = PrimeHub()
 timer = Timer()
 
@@ -19,65 +17,16 @@ colourR = ColorSensor("B")
 
 defaultSpeed = 60
 
-class error:
-    def typeCheck(value, givenType) -> bool:
-        if type(value) != givenType:
-            return True
-        return False
-
-
-    def throw(value, text : str):
-        raise ValueError("Error: " + str(value) + " is invalid \n" + str(text))
-
-
-    def template(value, typeVar : str):
-        if str(typeVar) == "sensor":
-            if value != "left" and value != "right":
-                error.throw(value, "Sensor must be a string with the value of 'left' or 'right'")
-            return
-        if str(typeVar) == "speed":
-            if error.typeCheck(value, int and float) == False or value <= 0:
-                error.throw(value, "Speed must be an integer greater than 0")
-            return
-        if str(typeVar) == "direction":
-            if value != "left" and value != "right":
-                error.throw(value, "Direction must be a string with the value of 'left' or 'right'")
-            return
-        if str(typeVar) == "moveDirection":
-            if value != "forward" and value != "backward":
-                error.throw(value, "Direction must be a string with the value of 'forward' or 'backward'")
-            return
-        if str(typeVar) == "armDirection":
-            if error.typeCheck(value, str) or value != "up" and value != "down":
-                error.throw(value, "Direction must be a string with the value of 'up' or 'down'")
-        if str(typeVar) == "distance":
-            if error.typeCheck(value, float) == False and error.typeCheck(value, int) == False or value <= 0:
-                error.throw(value, "Distance must an integer greater than 0")
-            return
-        if str(typeVar) == "armDistance":
-            if error.typeCheck(value, int) == False and error.typeCheck(value, float) == False:
-                error.throw(value, "Distance must an integer or float")
-            return
-        if str(typeVar) == "cm":
-            if error.typeCheck(value, int and float) == False or value <= 0:
-                error.throw(value, "Cm must be an integer greater than 0")
-
-
 def resetYawAngle():
     hub.motion_sensor.reset_yaw_angle()
-
 
 def resetMotors():
     rightMotor.set_degrees_counted(0)
     leftMotor.set_degrees_counted(0)
     arm.set_degrees_counted(0)
 
-
 def clear():
-    if platform == "linux" or "darwin":
-        os.sytem("clear")
-    else:
-        os.system("cls")
+    print("\033c")
 
 def waitLight(time : int, i : int, step : int, on : bool):
     timer.reset()
@@ -99,7 +48,6 @@ def count(time : int):
         print("Left Motor: " + str(leftMotor.get_degrees_counted()) + " | Right Motor: " + str(rightMotor.get_degrees_counted()) + " | Arm: " + str(arm.get_degrees_counted()) + " | Left Colour Sensor: " + str(colourL.get_color())) + " | Right Colour Sensor: " + str(colourR.get_color())
     clear()
 
-
 def motion():
     yaw = hub.motion_sensor.get_yaw_angle()
     roll = hub.motion_sensor.get_roll_angle()
@@ -107,12 +55,7 @@ def motion():
 
     print("Yaw: " + str(yaw) + " | Pitch: " + str(pitch) + " | Roll: " + str(roll))
 
-
 def move(distance : int, direction : str, speed : int  = defaultSpeed):
-    error.template(distance, "distance")
-    error.template(direction, "direction")
-    error.template(speed, "speed")
-
     resetMotors()
     resetYawAngle()
 
@@ -123,10 +66,7 @@ def move(distance : int, direction : str, speed : int  = defaultSpeed):
 
     movepair.stop()
 
-
 def moveWithCorrection(cm : float or int):
-    error.template(cm, "cm")
-
     resetMotors()
     resetYawAngle()
 
@@ -137,15 +77,8 @@ def moveWithCorrection(cm : float or int):
         movepair.start_tank_at_power((defaultSpeed + correction), (defaultSpeed - correction))
     movepair.stop()
 
-
 def turn(deg : int, direction : str, aggressive : bool = False):
-    error.template(deg, "deg")
-    error.template(direction, "direction")
-
     remainder = None
-
-    if type(aggressive) != bool:
-        error.throw(aggressive, "Aggressive mode must be a boolien")
 
     resetMotors()
     resetYawAngle()
@@ -207,11 +140,7 @@ def turn(deg : int, direction : str, aggressive : bool = False):
             resetYawAngle()
         return
 
-
 def followLine(sensor : str, cm : int or float):
-    error.template(sensor, "sensor")
-    error.template(cm, "cm")
-
     resetMotors()
 
     deg = cm / 0.077
@@ -245,12 +174,7 @@ def followLine(sensor : str, cm : int or float):
 
     movepair.stop()
 
-
 def moveArm(direction : str, speed : int, distance : int or float):
-    error.template(direction, "direction")
-    error.template(speed, "speed")
-    error.template(distance, "distance")
-
     resetMotors()
 
     if direction == "down":
@@ -261,9 +185,6 @@ def moveArm(direction : str, speed : int, distance : int or float):
 
 
 def moveToLine(sensor : str, direction : str):
-    error.template(sensor, "sensor")
-    error.template(direction, "direction")
-
     resetMotors()
     resetYawAngle()
 
@@ -306,6 +227,12 @@ def start(direction : str):
 def executeMission(missionId : int):
     if missionId == 0:
         pass
+    if missionId == 1:
+        print(1)
+    if missionId == 2:
+        print(2)
+    if missionId == 3:
+        print(3)
 
 def missionSelector():
     missionId = 0
