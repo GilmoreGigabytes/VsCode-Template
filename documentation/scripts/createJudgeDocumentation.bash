@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 echo "Creating documentation based on GIT history..."
 
